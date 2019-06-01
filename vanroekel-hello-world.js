@@ -1,3 +1,13 @@
+/*
+===================================
+;Title: Assignment 1.3
+;Author: Faye Van Roekel
+;Date: 01 June 2018
+;Modified By: 
+;Description: This is the 'Hello-World' assignment
+====================================
+*/
+
 +{
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
