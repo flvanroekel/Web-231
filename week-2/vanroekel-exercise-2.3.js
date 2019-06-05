@@ -37,4 +37,8 @@ console.log("Hello " + myName()+ " Van Roekel");
 console.log("My hometown is: " + address());
 console.log("Here is my email address: " + email());
 
+<<<<<<< HEAD
 // end program
+=======
+// end program
+>>>>>>> b954efeed1ba940cb05ea3f3f54da477b247b743
