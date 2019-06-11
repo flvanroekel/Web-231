@@ -45,3 +45,5 @@ switch (eventKeyCode) {
         console.log("Unrecognized key.");
         break;
 }
+
+//end program
