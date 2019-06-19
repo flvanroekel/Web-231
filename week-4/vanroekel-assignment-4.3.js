@@ -9,7 +9,6 @@ console.log(header.display("Faye", "Van Roekel", "Assignment 4.3"));
 ; Date:   19 June 2019
 ; Description: Filtering 4.3 Assignment 
 ;===========================================
-*/
 /*
   Expected output:
 
