@@ -1,0 +1,36 @@
+const header = require('../Vanroekel-header.js')
+                       
+console.log(header.display("Faye", "Van Roekel", "Assignment 5.1"));
+
+/*
+============================================
+; Title:  Assignment 5.1 Advanced Arrays
+; Author: Faye Van Roekel
+; Date:   18 June 2019
+; Description: Arrays 5.1 Advanced Arrays with Errors
+;===========================================
+*/
+
+// start program
+
+var persons = [
+    {firstname : "Faye", lastname: "Van Roekel"},
+    {firstname : "Chris", lastname: "Mayor"},
+    {firstname : "Allie", lastname: "Kempers"}
+  ];
+
+  function getFullName(item) {
+    var fullname = [item.firstname,item.lastname].join(" ");
+    return fullname;
+  }
+  
+
+
+
+
+console.log(getFullName) //report out first and last names
+console.log(person[4])  //report out the 4th element in the array
+
+
+/*=============================================
+// End program*/
