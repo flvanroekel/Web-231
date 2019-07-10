@@ -45,7 +45,5 @@ function Employee(id, firstName, lastName, title) {
   employees.forEach(function(value, index, array){
     console.log(value.id + " " + value.firstName + " " + value.lastName + " " + value.title);
   });
-
-
   
   //end
