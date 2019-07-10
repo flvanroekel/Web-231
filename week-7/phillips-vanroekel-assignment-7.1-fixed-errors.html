@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment 7.1</title> //added a title since title tags were here but not any text
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1>Display Object &amp; Arrray</h1>
+    <p id="object"></p>
+    <p id="array"></p>
+
+    <script>
+        /*
+		;===========================================================================================================================================
+		; Title:  phillips-discusssion-7.1.js
+		; Author: Ernie Phillips
+		; Date:   02 July 2019
+		; Modified By: Faye Van Roekel
+		; Description: create an HTML page that modifies element tags
+		;===========================================================================================================================================
+		*/
+        //start main
+        //create object literal
+        var dog = {
+            ears: "brown",
+            tail: "white and brown",
+            belly: "white",
+            back: "brown"
+        };
+        //create an array of cats
+        var cats = [
+            "Maine Coon",
+            "American Shorthair",
+            "Persian",
+            "Egyptian Mau",
+            "Norwegian Forest Cat"
+        ];
+        //sort the array alphabetically
+        cats.sort();
+        //find object selector and output results of dog object
+        document.getElementById('object').innerText = "The color of the dogs ears are "
+            + dog.ears + ", tail is " + dog.tail + ", belly is " + dog.belly + ", and back is " + dog.back + ".";
+        //on the line above corrected dog.bell to dog.belly.  the variable was incorrect
+
+            //find array selector and output results of cat array with foreach loop
+        cats.forEach(function(value, index, traversedObject){
+            //the line above was missing a comment behind the word value.  Added a comma.
+            document.getElementById('array').innerHTML += value + "<br />";
+        });
+        //end main
+    </script>
+</body>
+<html>
