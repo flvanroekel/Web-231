@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 7.4</title>
+
+  <link rel="stylesheet" href="site.css">
+
+</head>
+<body>
+  <table id="tblComputers">
+    <thead></thead>
+    <tbody></tbody>
+  </table>
+  <script>
+    /*
+		;===================================================
+		; Title:  Assignment 7.4 Inline JavaScript Functions
+		; Author: Faye Van Roekel
+		; Date:   11 July 2019
+		; Description: Inline JavaScript Functions
+		;===================================================
+		*/
+    //start
+    function Computer(id, name, amount) {
+      this.id = id, this.name = name, this.amount = amount;
+    }
+    
+    var computers = [
+      new Computer(1, 'Laptop', 1500.99),
+      new Computer(2, 'Motherboard', 35.70),
+      new Computer(3, 'Monitor', 174.99),
+      new Computer(4, 'Mouse', 13.99),
+      new Computer(5, 'Keyboard', 14.50)
+    ];
+
+    document.getElementById("tblComputers").tHead.innerHTML = "<tr>" +
+                                                                "<th>Id</th>" +
+                                                                "<th>Name</th>" +
+                                                                "<th>Amount</th>" +
+                                                                "<th>Functions</th>" +
+                                                              "</tr>";
+   
+    computers.forEach(function (value, index, arrayTraversal) {
+      document.getElementById('tblComputers').tBodies[0].innerHTML += '<tr>' +
+                                                                        '<td>' + value.id + '</td>' +
+                                                                        '<td>' + value.name + '</td>' +
+                                                                        '<td>' + value.amount + '</td>' +
+                                                                        '<td>' +
+                                                                            '<a href="javascript:alert(\'This will edit Item \' + ' + value.id + ')">Edit</a>&nbsp;' +
+                                                                            '<a href="javascript:confirm(\'Are your sure you want to delete Item \' + ' + value.id + ')")>Delete</a>' +
+                                                                        '</td>' +
+                                                                        '</tr>';
+    });
+    //end
+  </script>
+</body>
+</html>
