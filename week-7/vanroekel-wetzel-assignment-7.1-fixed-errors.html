@@ -1,0 +1,45 @@
+<!--
+============================================
+; Title:  Discussion 7.1
+; Author: Loren Wetzel
+; Date:   10 July 2019
+; Modified By: Faye Van Roekel
+; Description: create a simple HTML page with
+;   embedded JavaScript and at least (2)
+;   JavaScript selector errors
+;===========================================
+-->
+
+<!DOCTYPE html>
+</body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Wetzel Discussion 7.1</title>
+
+  <!-- you will need to the href to point to your root directories css file -->
+  <link rel="stylesheet" href="../site.css">
+
+</head>
+
+<body>
+  <!-- displays the heading -->
+  <script>
+    document.write("What is Up Discussion Board???"); //removed h2 for headings and added a semi-colon at the end of the sentence
+  </script>
+
+  <div id="theList"></div>
+  <!-- displays a list -->
+  <script>
+      document.getElementById("theList") .innerHTML = "So far these students have posted" + //added a space before .innerHTML and also added a 'T' in HTML
+      "<ul>" +
+      "<li>Cory</li>" +
+      "<li>Faye</li>" +
+      "<li>Ernie</li>" +
+      "<li>Loren</li>" +
+      "</ul>"; //added a semicolon to finish the script
+  </script>
+</body>
+
+</html>
