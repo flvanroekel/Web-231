@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Exercise 8.2</title>
+  
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+    
+    <style type="text/css">
+        ul {
+          font-family: 'Roboto';
+          font-weight: 400;
+          list-style: none;
+          margin: 0 auto;
+          width: 80px;
+        }
+        ul::before {
+          height: 20px;
+          width: 100%;
+        }
+      </style>
+    </head>
+    <body>
+      <div id="fruits"></div>
+    
+      <script>
+        var output = '';
+        var fruit = [
+          {
+            id: 101,
+            type: 'Bananas'
+          },
+          {
+            id: 102,
+            type: 'Peaches'
+          },
+          {
+            id: 103,
+            type: 'Kiwi'
+          },
+          {
+            id: 104,
+            type: 'Avocado'
+          },
+          {
+            id: 105,
+            type: 'Strawberries'
+          },
+        ];
+        
+// output
+        output += '<h1>Fruit I Like to Eat!</h1>';
+        output += '<ul id="fruit">';
+        fruit.forEach(item => {
+          output += '<li id="' + item.id + '">' + item.type + '</li>';
+        });
+        output += '</ul>';
+        document.getElementById('fruits').innerHTML = output;
+    </script>
+    </body>
+</html>
+<br>
+/*
+;====================================
+; Title:  vanroekel-exercise-8.2.html
+; Author: Professor Krasso
+; Date:   17 July 2019
+; Modified By: Faye Van Roekel
+; Description: Dynamic HTML
+;=====================================
+*/
