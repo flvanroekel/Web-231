@@ -3,9 +3,8 @@
 ; Title:  Discussion 8.1 - 2 errors
 ; Author: Ashleigh Lyman
 ; Date:   18 July 2019
-; Modified By:
-; Description:
-; Create HTML page with jquery errors
+; Modified By: Faye Van Roekel
+; Description: Create HTML page with jquery errors
 ;===========================================
 -->
 
@@ -26,11 +25,11 @@
     </script>
 
     <script>
-        $(document).ready(function) {
+        $(document).ready(function() { //added the handler so it reads (function()
             $("p").click(function() {
                 $(this).hide();
             });
-        };
+        }); //added the second parenthesies  
     </script>
 </head>
 <body>
