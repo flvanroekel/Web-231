@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <title>Exercise 8.3</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+  <!-- you will need to the href to point to your root directories css file -->
+  
+  <link rel="stylesheet" href="site.css">
+  <style type="text/css">
+    table {
+      font-family: 'Roboto';
+      font-weight: 400;
+      margin: 20px 20px 20px 20px;
+    }
+    table::before {
+      height: 20px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+    <h1>Title for Lorem Ipsum Paragraph</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cursus posuere mi at tempor. Pellentesque aliquam diam ac luctus rutrum. Nunc non pellentesque nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec consequat tellus, interdum finibus urna. Nullam at turpis vitae purus pretium euismod vel vitae purus. Donec ante nisi, pretium ac turpis in, commodo vestibulum sem. Etiam interdum egestas ligula, vel lobortis sem dignissim at. Mauris non ullamcorper dolor. Praesent gravida at sapien vitae mattis. Ut vel ante quis mauris vestibulum pharetra dictum sagittis ex. Ut non turpis nibh. Suspendisse mattis lectus elit, rutrum sagittis orci hendrerit vitae.</p>
+
+    <button>Toggle</button>
+<br>
+<br>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Type</th>
+        </tr>
+        <tr>
+            <td><a href="#" class="Id">101</a></td>
+            <td><p class="Fruit">Bananas</p></td>
+        </tr>
+        <tr>
+            <td><a href="#" class="Id">102</a></td>
+                <td><p class="Fruit">Peaches</p></td>
+        </tr>
+        <tr>
+            <td><a href="#" class="Id">103</a></td>
+            <td><p class="Fruit">Kiwi</p></td>
+        </tr>
+        <tr>
+            <td><a href="#" class="Id">104</a></td>
+            <td><p class="Fruit">Avocados</p></td>
+        </tr>
+        <tr>
+            <td><a href="#" class="Id">105</a></td>
+            <td><p class="Fruit">Strawberries</p></p>
+        </tr>
+    </table>
+
+
+<script type="text/javascript">
+
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").toggle();
+  });
+});
+
+$(".Id").click(function(){ 
+    alert("{Id: " + $(this).text() 
+    + ", Fruit: " + $(this).parent().next().children(".Fruit").text() + "}" 
+    );
+});
+     
+
+</script>
+
+</body>
+</html>
+
+
+/*
+;====================================
+; Title:  vanroekel-exercise-8.3.html
+; Author: Professor Krasso
+; Date:   18 July 2019
+; Modified By: Faye Van Roekel
+; Description: jQuery
+;=====================================
+*/
