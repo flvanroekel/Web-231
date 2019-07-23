@@ -1,0 +1,123 @@
+<!--
+==========================================================================
+; Title: assignment-8.4
+; Author: Faye Van Roekel
+; Date: 22 July 2019
+; Modified By:
+; Description: assignment-8.4-putting-it-all-together
+;========================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 8.4 Putting It All Together</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  
+  <!-- you will need to the href to point to your root directories css file -->
+  <link rel="stylesheet" href="site.css">
+
+  <style type="text/css">
+    #employee tbody tr:hover {
+      cursor: pointer;
+      background-color: #ffff99;
+    }
+    tr:hover,
+      tr:focus {
+        background-color: #feff9c;
+        cursor: pointer;
+      }
+  </style>
+</head>
+<body>
+<h2>Employee Listing</h2>
+<div id="emps"></div>
+
+<table id="tblEmployees">
+      <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Title</th>
+      </tr>
+  
+  </table>
+
+<script type="text/javascript">
+
+ 
+  $(function() {
+        $.each(_employeeList, function(index, item) {
+          $("#tblEmployees > tbody").append(
+            "<tr>" +
+              "<td>" +
+              item.id +
+              "</td>" +
+              "<td>" +
+              item.firstName +
+              "</td>" +
+              "<td>" +
+              item.lastName +
+              " </td>" +
+              "<td>" +
+              item.title +
+              "</td>" +
+              "</tr>"
+          );
+        });
+
+  $("table tr").click(function () {
+            getEmployee($(this).find("td:first").html());
+          });
+        });
+    
+    document.getElementById("emps").innerHTML = output;
+    
+      function employee(id, firstName, lastName, title) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.title = title;
+      }
+    function getId(package) {
+      return package.find('td:first-child').text() - 1;
+      }
+    var _employeeList = [
+      new employee(1, "Thomas", "Edison", "Software Engineer"),
+      new employee(2, "Benjamin", "Franklin", "Programmer"),
+      new employee(3, "Nikola", "Tesla", "Project Manager"),
+      new employee(4, "Charles", "Babbage", "Product Manager"),
+      new employee(5, "Alexander", "Bell", "Business Analyst")
+      ];
+var output = ""; 
+
+      employees.forEach(employee => {
+          output += '<tr role="row" tabindex="' + employee.id + '">';
+          output += '<td role="cell">' + employee.id + '</td>' + '<td role="cell">' + employee.firstName + '</td>' + '<td role="cell">' + employee.lastName + '</td>' + '<td role="cell">' + employee.title + '</td>';
+          output += '</tr>';
+        });
+        output += '</tbody></table>';
+
+        document.getElementById("emps").innerHTML = output;
+        // jQuery onClick event
+        // Don't remove this, just add your code to the body of the event (curly braces)
+       
+      function alertType(employee) {
+        alert('This site says...\n' + employee.id + ' ' + employee.firstName + ' ' + employee.lastName + ' ' + employee.title);
+      }
+      $(function () {
+          $("table tr").click(function () {
+            alertType(employees[getId($(this))]);
+          });
+          
+          $("table tr").keypress(function (event) {
+            if (event.which == 13) {
+              alertType(employees[getId($(this))]);
+            }
+          });
+        });
+    </script>
+  </body>
+</html>
